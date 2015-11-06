@@ -1,0 +1,10 @@
+node_modules/*
+reports/
+coverage/
+*.swp
+*.swo
+*.log
+*.DS_Store
+*.rdb
+local.js
+build/

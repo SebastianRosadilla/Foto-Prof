@@ -1,0 +1,36 @@
+.edit_Page {
+  tr {
+    background-color: #01D19D;
+  }
+  th {
+  font-size: 16px;
+  width: 33.3333%;
+  }
+  td {
+    text-align: center;
+    font-size: 18px;
+    font-family: Impact;
+  }
+  h2 {
+    padding-top: 8px;
+  }
+  .new_data {
+    background-color: #9999FF;
+  }
+  .current {
+    border-radius: 8px;
+    background-color: #999966;
+    box-shadow: 3px 3px 3px 3px;
+  }
+  .Go-back {
+    text-align: center;
+    background-color: #6699FF;
+    box-shadow: 3px 3px;
+    border-radius: 5px;
+    a {
+      text-decoration: none;
+      font-family: serif;
+      font-size: 22px;
+    }
+  }
+}
