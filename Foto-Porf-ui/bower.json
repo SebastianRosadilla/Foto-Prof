@@ -23,6 +23,7 @@
     "angular": "~1.4.7",
     "angular-resource": "~1.4.7",
     "angular-ui-router": "~0.2.15",
-    "angular-extend-promises": "~1.0.0-rc.3"
+    "angular-extend-promises": "~1.0.0-rc.3",
+    "bootstrap": "~3.3.5"
   }
 }

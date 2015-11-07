@@ -21,6 +21,7 @@ var FILES = {
  * Initialize the server.
  */
 gulp.task('watch', ['js', 'scss', 'html'], function () {
+  console.log(plugins);
   plugins.browserSync({
     server: { baseDir: 'build' },
     files: [
@@ -64,3 +65,6 @@ gulp.task('scss', function () {
     .pipe(plugins.concat('app.css'))
     .pipe(gulp.dest(FILES.DEST.CSS));
 });
+
+// Build command
+gulp.task('build', ['sass', 'html', 'minjs', 'revision']);
