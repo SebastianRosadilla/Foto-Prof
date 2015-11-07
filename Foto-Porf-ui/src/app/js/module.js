@@ -10,10 +10,11 @@
     .config(function($stateProvider, $urlRouterProvider) {
       $stateProvider
         .state('app', {
-          url: '/app',
+          url: '',
           views: {
             main: {
-              templateUrl: 'app/templates/app.html'
+              templateUrl: 'app/templates/app.html',
+              controller: 'AppCtrl as app'
             }
           }
         });
