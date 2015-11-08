@@ -9,27 +9,30 @@ var FILES = {
     JS: ['src/**/js/**/*.js', 'src/**/js/*.js'],
     SCSS: ['src/**/scss/*.scss', 'src/**/scss/**/*.scss'],
     HTML: ['src/**/templates/*.html', 'src/index.html'],
-    BOWER: ['bower_components/**/*.*']
+    BOWER: ['bower_components/**/*.*'],
+    IMG: ['img/*.*']
   },
   DEST: {
     JS: 'build/js/',
     CSS: 'build/css/',
     HTML: 'build/',
-    BOWER: 'build/js/libs/'
+    BOWER: 'build/js/libs/',
+    IMG: 'build/img/'
   }
 };
 
 /**
  * Initialize the server.
  */
-gulp.task('watch', ['js', 'scss', 'html', 'bower'], function () {
+gulp.task('watch', ['js', 'scss', 'html', 'bower', 'img'], function () {
   plugins.browserSync({
     server: { baseDir: 'build' },
     files: [
       FILES.DEST.JS,
       FILES.DEST.CSS,
       FILES.DEST.HTML,
-      FILES.DEST.BOWER
+      FILES.DEST.BOWER,
+      FILES.DEST.IMG
     ]
   });
 
@@ -37,12 +40,22 @@ gulp.task('watch', ['js', 'scss', 'html', 'bower'], function () {
   gulp.watch(FILES.SRC.SCSS, ['scss']);
   gulp.watch(FILES.SRC.HTML, ['html']);
   gulp.watch(FILES.SRC.BOWER, ['bower']);
+  gulp.watch(FILES.SRC.IMG, ['img']);
+});
+
+/**
+* Compile prints
+*/
+gulp.task('html', function () {
+  gulp
+    .src(FILES.SRC.IMG)
+    .pipe(gulp.dest(FILES.DEST.IMG));
 });
 
 /**
  * Compile html files.
  */
-gulp.task('html', function () {
+gulp.task('img', function () {
   gulp
     .src(FILES.SRC.HTML)
     .pipe(gulp.dest(FILES.DEST.HTML));
@@ -76,4 +89,4 @@ gulp.task('bower', function () {
 })
 
 // Build command
-gulp.task('build', ['scss', 'html', 'js']);
+gulp.task('build', ['scss', 'html', 'js', 'bower','img']);
