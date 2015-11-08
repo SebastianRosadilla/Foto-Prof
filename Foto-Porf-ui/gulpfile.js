@@ -24,23 +24,19 @@ var FILES = {
 /**
  * Initialize the server.
  */
-gulp.task('watch', ['js', 'scss', 'html', 'bower', 'img'], function () {
+gulp.task('watch', ['js', 'scss', 'html'], function () {
   plugins.browserSync({
     server: { baseDir: 'build' },
     files: [
       FILES.DEST.JS,
       FILES.DEST.CSS,
-      FILES.DEST.HTML,
-      FILES.DEST.BOWER,
-      FILES.DEST.IMG
+      FILES.DEST.HTML
     ]
   });
 
-  gulp.watch(FILES.SRC.JS, ['js']);
-  gulp.watch(FILES.SRC.SCSS, ['scss']);
-  gulp.watch(FILES.SRC.HTML, ['html']);
-  gulp.watch(FILES.SRC.BOWER, ['bower']);
-  gulp.watch(FILES.SRC.IMG, ['img']);
+  gulp.watch(FILES.SRC.JS, ['build']);
+  gulp.watch(FILES.SRC.SCSS, ['build']);
+  gulp.watch(FILES.SRC.HTML, ['build']);
 });
 
 /**
