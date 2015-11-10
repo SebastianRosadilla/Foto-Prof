@@ -119,6 +119,9 @@ a:hover, a:focus {
 .description {
 	padding: 6em 8em;
 	overflow: hidden;
+	&.landing {
+		padding-bottom: 0;
+	}
 }
 
 .description p {

@@ -11,7 +11,7 @@ var FILES = {
     HTML: ['src/**/templates/*.html', 'src/index.html'],
     BOWER: ['bower_components/**/*.*', 'src/extra/*.*'],
     FONT: ['src/app/fonts/**/*.*', 'src/app/fonts/*.*'],
-    IMG: ['src/img/*.*']
+    IMG: ['src/img/**/*.*']
   },
   DEST: {
     JS: 'build/js/',
@@ -39,6 +39,7 @@ gulp.task('watch', ['js', 'scss', 'html'], function () {
   gulp.watch(FILES.SRC.JS, ['build']);
   gulp.watch(FILES.SRC.SCSS, ['build']);
   gulp.watch(FILES.SRC.HTML, ['build']);
+  gulp.watch(FILES.SRC.BOWER, ['build']);
 });
 
 /**

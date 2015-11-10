@@ -24,6 +24,7 @@
     "angular-resource": "~1.4.7",
     "angular-ui-router": "~0.2.15",
     "angular-extend-promises": "~1.0.0-rc.3",
-    "classie": "~1.0.1"
+    "classie": "~1.0.1",
+    "requirejs": "~2.1.20"
   }
 }
