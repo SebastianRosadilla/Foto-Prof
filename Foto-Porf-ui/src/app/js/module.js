@@ -3,18 +3,27 @@
 
   var dependencies = [
     'ui.router',
-    'ngResource'
+    'ngResource',
+    'gallery'
   ];
 
-  ng.module('Foto-Prof', dependencies)
+  ng.module('foto-prof', dependencies)
     .config(function($stateProvider, $urlRouterProvider) {
       $stateProvider
-        .state('app', {
+        .state('landing', {
           url: '',
           views: {
             main: {
-              templateUrl: 'app/templates/app.html',
-              controller: 'AppCtrl as app'
+              templateUrl: 'app/templates/landing.html',
+              controller: 'LandingCtrl as landing'
+            },
+            contact: {
+              templateUrl: 'app/templates/contact.html',
+              controller: 'ContactCtrl as contact'
+            },
+            about: {
+              templateUrl: 'app/templates/about.html',
+              controller: 'AboutCtrl as about'
             }
           }
         });

@@ -9,14 +9,16 @@ var FILES = {
     JS: ['src/**/js/**/*.js', 'src/**/js/*.js'],
     SCSS: ['src/**/scss/*.scss', 'src/**/scss/**/*.scss'],
     HTML: ['src/**/templates/*.html', 'src/index.html'],
-    BOWER: ['bower_components/**/*.*'],
-    IMG: ['img/*.*']
+    BOWER: ['bower_components/**/*.*', 'src/extra/*.*'],
+    FONT: ['src/app/fonts/**/*.*', 'src/app/fonts/*.*'],
+    IMG: ['src/img/*.*']
   },
   DEST: {
     JS: 'build/js/',
     CSS: 'build/css/',
     HTML: 'build/',
     BOWER: 'build/js/libs/',
+    FONT: 'build/fonts/',
     IMG: 'build/img/'
   }
 };
@@ -49,7 +51,7 @@ gulp.task('html', function () {
 });
 
 /**
- * Compile html files.
+* Compile prints
  */
 gulp.task('img', function () {
   gulp
@@ -78,6 +80,16 @@ gulp.task('scss', function () {
     .pipe(gulp.dest(FILES.DEST.CSS));
 });
 
+/**
+* Compile Fonts files.
+*/
+gulp.task('fonts', function () {
+  gulp
+    .src(FILES.SRC.FONT)
+    .pipe(gulp.dest(FILES.DEST.FONT));
+});
+
+
 gulp.task('bower', function () {
   gulp
     .src(FILES.SRC.BOWER)
@@ -85,4 +97,4 @@ gulp.task('bower', function () {
 })
 
 // Build command
-gulp.task('build', ['scss', 'html', 'js', 'bower','img']);
+gulp.task('build', ['scss', 'html', 'js', 'bower','img', 'fonts']);

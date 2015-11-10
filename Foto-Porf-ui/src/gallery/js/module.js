@@ -3,18 +3,19 @@
 
   var dependencies = [
     'ui.router',
-    'ngResource'
+    'ngResource',
+    'foto-prof'
   ];
 
-  ng.module('landing', dependencies)
+  ng.module('gallery', dependencies)
     .config(function($stateProvider, $urlRouterProvider) {
       $stateProvider
-        .state('landing', {
-          url: '/Home',
+        .state('gallery', {
+          url: '/Gallery',
           views: {
             main: {
-              templateUrl: 'landing/templates/landing.html',
-              controller: 'LandingCtrl as landing'
+              templateUrl: 'gallery/templates/gallery.html',
+              controller: 'GalleryCtrl as gallery'
             }
           }
         });

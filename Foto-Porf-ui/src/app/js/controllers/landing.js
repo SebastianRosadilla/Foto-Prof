@@ -5,6 +5,6 @@
     this._$state = $state;
   };
 
-  ng.module('landing')
+  ng.module('foto-prof')
     .controller('LandingCtrl', LandingCtrl);
 })(angular);
