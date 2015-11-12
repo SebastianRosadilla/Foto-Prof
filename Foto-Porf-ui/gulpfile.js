@@ -6,8 +6,8 @@ var gulp = require('gulp'),
  */
 var FILES = {
   SRC: {
-    JS: ['src/**/js/**/*.js', 'src/**/js/*.js'],
-    SCSS: ['src/**/scss/*.scss', 'src/**/scss/**/*.scss'],
+    JS: ['src/**/js/**/*.js', 'src/**/js/*.js', 'src/extra/*.*'],
+    SCSS: ['src/**/scss/*.*', 'src/**/scss/**/*.*'],
     HTML: ['src/**/templates/*.html', 'src/index.html'],
     BOWER: ['bower_components/**/*.*', 'src/extra/*.*'],
     FONT: ['src/app/fonts/**/*.*', 'src/app/fonts/*.*'],

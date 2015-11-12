@@ -4,7 +4,8 @@
   var dependencies = [
     'ui.router',
     'ngResource',
-    'gallery'
+    'gallery',
+    'contact'
   ];
 
   ng.module('foto-prof', dependencies)

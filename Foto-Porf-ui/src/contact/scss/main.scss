@@ -1,0 +1,35 @@
+.contact {
+  background: #36A874;
+  border-bottom: 10px solid black;
+  border-top: 10px solid black;
+  margin: 10px 0;
+
+  form {
+    display: inline-flex;
+    margin-left: 22%;
+    margin-top: 20px;
+    text-align: center;
+
+    span {
+      color: #fff;
+      font-size: 30px;
+      text-decoration: underline;
+    }
+
+    div {
+      div {
+        p {
+          color: #fff;
+        }
+
+        &.description {
+          color: #fff;
+          text-decoration: underline;
+          textarea {
+            resize: none;
+          }
+        }
+      }
+    }
+  }
+}
