@@ -29,6 +29,15 @@
         }
       }
 
+      .button {
+        margin-top: 2%;
+        input {
+          background: rgba(180, 198, 177, 0.82);
+          border: 2px solid black;
+          font-weight: 600;
+        }
+      }
+
       .title {
         margin: 2% 0;
         * {
