@@ -25,7 +25,7 @@ body {
 	content: '';
 	display: table;
 }
- 
+
 .clearfix:after {
 	clear: both;
 }
@@ -96,7 +96,7 @@ a:hover, a:focus {
 	float: left;
 }
 
-.codrops-icon:before {
+.codrops-icon:before, ::after {
 	margin: 0 4px;
 	text-transform: none;
 	font-weight: normal;
@@ -114,6 +114,10 @@ a:hover, a:focus {
 
 .codrops-icon-prev:before {
 	content: "\e004";
+}
+
+.codrops-icon-post::after {
+	content: "\e000";
 }
 
 .description {
@@ -240,7 +244,7 @@ svg.polaroid rect {
 
 
 @media screen and (max-width: 45em) {
-	.codrops-header, 
+	.codrops-header,
 	.description {
 		font-size: 80%;
 	}
