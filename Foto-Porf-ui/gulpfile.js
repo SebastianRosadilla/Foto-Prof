@@ -8,7 +8,7 @@ var FILES = {
   SRC: {
     JS: ['src/**/js/**/*.js', 'src/**/js/*.js', 'src/extra/*.*'],
     SCSS: ['src/**/scss/*.*', 'src/**/scss/**/*.*'],
-    HTML: ['src/**/templates/*.html', 'src/index.html'],
+    HTML: ['src/**/templates/*.*', 'src/index.html'],
     BOWER: ['bower_components/**/*.*', 'src/extra/*.*'],
     FONT: ['src/app/fonts/**/*.*', 'src/app/fonts/*.*'],
     IMG: ['src/img/**/*.*']
@@ -47,8 +47,8 @@ gulp.task('watch', ['js', 'scss', 'html'], function () {
 */
 gulp.task('html', function () {
   gulp
-    .src(FILES.SRC.IMG)
-    .pipe(gulp.dest(FILES.DEST.IMG));
+    .src(FILES.SRC.HTML)
+    .pipe(gulp.dest(FILES.DEST.HTML));
 });
 
 /**
@@ -56,8 +56,8 @@ gulp.task('html', function () {
  */
 gulp.task('img', function () {
   gulp
-    .src(FILES.SRC.HTML)
-    .pipe(gulp.dest(FILES.DEST.HTML));
+    .src(FILES.SRC.IMG)
+    .pipe(gulp.dest(FILES.DEST.IMG));
 });
 
 /**
