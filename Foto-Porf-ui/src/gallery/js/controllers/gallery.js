@@ -19,7 +19,7 @@
   };
 
   GalleryCtrl.prototype.obteinPrints = function () {
-    console.log(this);
+    // console.log(this);
   };
 
   ng.module('foto-prof')
