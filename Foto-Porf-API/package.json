@@ -1,0 +1,22 @@
+{
+  "name": "foto-prof-api",
+  "version": "1.0.0",
+  "description": "Foto-Porf-API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/SebastianRosadilla/Foto-Prof.git"
+  },
+  "author": "Alfredo Sebastian Rosadilla Ribeiro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SebastianRosadilla/Foto-Prof/issues"
+  },
+  "homepage": "https://github.com/SebastianRosadilla/Foto-Prof#readme",
+  "devDependencies": {
+    "express": "^4.13.3"
+  }
+}
